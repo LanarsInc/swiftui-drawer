@@ -18,6 +18,8 @@
 		E8E214E52970555700DF7962 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E214E12970555700DF7962 /* Gilroy-Regular.ttf */; };
 		E8E214E62970555700DF7962 /* Gilroy-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E214E22970555700DF7962 /* Gilroy-Semibold.ttf */; };
 		E8E214E72970555700DF7962 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E214E32970555700DF7962 /* Gilroy-Bold.ttf */; };
+		E8E57C4029762572006B3A6C /* MenuItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E57C3F29762572006B3A6C /* MenuItemList.swift */; };
+		E8E57C4229762591006B3A6C /* MenuButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E57C4129762591006B3A6C /* MenuButtonStyle.swift */; };
 		E8FEEA8629704DCD001FF8AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEA8529704DCD001FF8AF /* User.swift */; };
 		E8FEEA9529704F78001FF8AF /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEA8B29704F77001FF8AF /* Dimension.swift */; };
 		E8FEEA9629704F78001FF8AF /* View+OverrideColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEA8E29704F77001FF8AF /* View+OverrideColorScheme.swift */; };
@@ -50,6 +52,8 @@
 		E8E214E12970555700DF7962 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		E8E214E22970555700DF7962 /* Gilroy-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.ttf"; sourceTree = "<group>"; };
 		E8E214E32970555700DF7962 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		E8E57C3F29762572006B3A6C /* MenuItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemList.swift; sourceTree = "<group>"; };
+		E8E57C4129762591006B3A6C /* MenuButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonStyle.swift; sourceTree = "<group>"; };
 		E8FEEA8529704DCD001FF8AF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8FEEA8B29704F77001FF8AF /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		E8FEEA8E29704F77001FF8AF /* View+OverrideColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+OverrideColorScheme.swift"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		E8E214DA297053B700DF7962 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				E8E57C4129762591006B3A6C /* MenuButtonStyle.swift */,
 				E8E214DB297053D400DF7962 /* MenuLabelStyle.swift */,
 			);
 			path = Style;
@@ -237,6 +242,7 @@
 				E8E214DD2970540000DF7962 /* Appearance */,
 				E8E214DA297053B700DF7962 /* Style */,
 				E8FEEAA029704F90001FF8AF /* UserHeader.swift */,
+				E8E57C3F29762572006B3A6C /* MenuItemList.swift */,
 				E8E214D82970539A00DF7962 /* MenuItem.swift */,
 				E8FEEAA629704F90001FF8AF /* UserImage.swift */,
 			);
@@ -337,12 +343,14 @@
 				E8FEEAAB29704F90001FF8AF /* ColorSchemeButtonStyle.swift in Sources */,
 				E8FEEA9729704F78001FF8AF /* ColorScheme+Toggle.swift in Sources */,
 				E8FEEA9929704F78001FF8AF /* TypographyStyle.swift in Sources */,
+				E8E57C4029762572006B3A6C /* MenuItemList.swift in Sources */,
 				E8FEEA9829704F78001FF8AF /* Binding+Default.swift in Sources */,
 				E8FEEABC2970505A001FF8AF /* MenuAppearanceEnvironmentKey.swift in Sources */,
 				E832B1F129533B74002E3462 /* ExampleApp.swift in Sources */,
 				E8FEEA9529704F78001FF8AF /* Dimension.swift in Sources */,
 				E8FEEA8629704DCD001FF8AF /* User.swift in Sources */,
 				E8FEEAAC29704F90001FF8AF /* Label+ColorScheme.swift in Sources */,
+				E8E57C4229762591006B3A6C /* MenuButtonStyle.swift in Sources */,
 				E8FEEA9629704F78001FF8AF /* View+OverrideColorScheme.swift in Sources */,
 				E8FEEA9A29704F78001FF8AF /* AnchorPreferenceKey.swift in Sources */,
 				E8FEEAAE29704F90001FF8AF /* UserHeader.swift in Sources */,

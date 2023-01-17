@@ -16,9 +16,11 @@ struct MenuLabelStyle: LabelStyle {
       configuration.icon
         .frame(width: .contentHeight, height: .contentHeight, alignment: .center)
 
+      if appearance == .default {
         configuration.title
           .typographyStyle(.title)
           .transition(.move(edge: .trailing).combined(with: .opacity))
+      }
     }
   }
 }
@@ -37,26 +39,23 @@ struct MenuLabelStyle_Previews: PreviewProvider {
     @State private var appearance: MenuAppearance = .default
 
     var body: some View {
-      ZStack(alignment: .leading) {
-        Color("color/background")
-
-        Label(item: .dashboard)
-          .labelStyle(.menuLabel)
-          .preferredMenuAppearance(appearance)
-          .overlay {
-            Rectangle()
-              .stroke(.blue, lineWidth: 1)
+      Label(item: .dashboard)
+        .labelStyle(.menuLabel)
+        .menuAppearance(appearance)
+        .overlay {
+          Rectangle()
+            .stroke(.blue, lineWidth: 1)
+        }
+        .onTapGesture {
+          withAnimation {
+            appearance.toggle()
           }
-          .onTapGesture {
-            withAnimation {
-              appearance.toggle()
-            }
-          }
-      }
+        }
     }
   }
 
   static var previews: some View {
     Preview()
+      .previewLayout(.sizeThatFits)
   }
 }

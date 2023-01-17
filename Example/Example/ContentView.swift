@@ -4,34 +4,17 @@ import Drawer
 
 struct ContentView: View {
 
-  @State private var isOpened = true
+  @State var selection: MenuItem? = .dashboard
+  @State var appearance: MenuAppearance = .default
 
   var body: some View {
-    Drawer(
-      isOpened: $isOpened,
-      menu: {
-        ZStack {
-          Color.white
-
-          Text("Menu")
-        }
-        .frame(width: 200)
-      },
-      content: {
-        ZStack {
-          Color("color/background")
-            .edgesIgnoringSafeArea(.all)
-
-          Button {
-            isOpened.toggle()
-          } label: {
-            Text("Open")
-              .foregroundColor(Color("color/text"))
-              .typographyStyle(.headline)
-          }
-        }
+    MenuItemList(selection: $selection) {
+      withAnimation(.spring()) {
+        appearance.toggle()
       }
-    )
+    }
+    .fixedSize(horizontal: true, vertical: false)
+    .menuAppearance(appearance)
     .statusBarHidden(true)
   }
 }

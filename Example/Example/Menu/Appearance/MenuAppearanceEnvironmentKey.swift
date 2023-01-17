@@ -20,7 +20,7 @@ extension EnvironmentValues {
 
 extension View {
 
-  func preferredMenuAppearance(_ appearance: MenuAppearance) -> some View {
+  func menuAppearance(_ appearance: MenuAppearance) -> some View {
     environment(\.menuAppearance, appearance)
   }
 }

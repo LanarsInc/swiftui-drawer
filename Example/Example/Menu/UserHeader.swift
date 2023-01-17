@@ -11,29 +11,25 @@ private extension CGFloat {
 
 struct UserHeader: View {
 
-  @Environment(\.menuAppearance) private var appearance
-
   let user: User
 
   var body: some View {
-      Label(
-        title: {
-          if appearance == .default {
-            VStack(alignment: .leading, spacing: .vSpacing) {
-              Text(user.name)
-                .typographyStyle(.headline)
+    Label(
+      title: {
+        VStack(alignment: .leading, spacing: .vSpacing) {
+          Text(user.name)
+            .typographyStyle(.headline)
 
-              Text(user.position)
-                .typographyStyle(.subheadline)
-            }
-            .foregroundColor(Color("color/text"))
-          }
-        },
-        icon: {
-          UserImage(imageName: user.imageName, isOnline: user.isOnline)
+          Text(user.position)
+            .typographyStyle(.subheadline)
         }
-      )
-      .labelStyle(.menuLabel)
+        .foregroundColor(Color("color/text"))
+      },
+      icon: {
+        UserImage(imageName: user.imageName, isOnline: user.isOnline)
+      }
+    )
+    .labelStyle(.menuLabel)
   }
 }
 
@@ -43,7 +39,7 @@ struct UserProfileHeader_Previews: PreviewProvider {
       UserHeader(user: .stub)
 
       UserHeader(user: .stub)
-        .preferredMenuAppearance(.compact)
+        .menuAppearance(.compact)
     }
     .background(Color("color/background"))
     .previewLayout(.sizeThatFits)
