@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8256A2329776AA90070E510 /* MenuItemGeometryPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8256A2229776AA90070E510 /* MenuItemGeometryPreferenceKey.swift */; };
 		E832B1F129533B74002E3462 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832B1F029533B74002E3462 /* ExampleApp.swift */; };
 		E832B1F329533B74002E3462 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832B1F229533B74002E3462 /* ContentView.swift */; };
 		E832B1F529533B76002E3462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E832B1F429533B76002E3462 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8256A2229776AA90070E510 /* MenuItemGeometryPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemGeometryPreferenceKey.swift; sourceTree = "<group>"; };
 		E832B1ED29533B74002E3462 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E832B1F029533B74002E3462 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		E832B1F229533B74002E3462 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				E8E214DA297053B700DF7962 /* Style */,
 				E8FEEAA029704F90001FF8AF /* UserHeader.swift */,
 				E8E57C3F29762572006B3A6C /* MenuItemList.swift */,
+				E8256A2229776AA90070E510 /* MenuItemGeometryPreferenceKey.swift */,
 				E8E57C4329762B3B006B3A6C /* MenuView.swift */,
 				E8E57C4529762B76006B3A6C /* MenuBackground.swift */,
 				E8E214D82970539A00DF7962 /* MenuItem.swift */,
@@ -347,6 +350,7 @@
 				E8FEEAAD29704F90001FF8AF /* ColorSchemePicker.swift in Sources */,
 				E832B1F329533B74002E3462 /* ContentView.swift in Sources */,
 				E8FEEAAF29704F90001FF8AF /* MenuAppearance.swift in Sources */,
+				E8256A2329776AA90070E510 /* MenuItemGeometryPreferenceKey.swift in Sources */,
 				E8FEEAAB29704F90001FF8AF /* ColorSchemeButtonStyle.swift in Sources */,
 				E8FEEA9729704F78001FF8AF /* ColorScheme+Toggle.swift in Sources */,
 				E8FEEA9929704F78001FF8AF /* TypographyStyle.swift in Sources */,

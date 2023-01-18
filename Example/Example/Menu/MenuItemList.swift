@@ -56,7 +56,37 @@ struct MenuItemList: View {
           }
         )
         .buttonStyle(MenuItemButtonStyle(isSelected: item == selection))
+        .anchorPreference(key: MenuItemGeometryPreferenceKey.self, value: .bounds) {
+          [item: $0]
+        }
       }
+    }
+    .overlayPreferenceValue(MenuItemGeometryPreferenceKey.self, alignment: .topLeading) { value in
+      VStack(alignment: .leading) {
+        ForEach(items) { item in
+          Button(
+            action: { /* noop */ },
+            label: { Label(item: item) }
+          )
+          .buttonStyle(MenuItemButtonStyle(isSelected: true))
+        }
+      }
+      .background(Color("color/selectionBackground"))
+      .mask {
+        GeometryReader { proxy in
+          selectionBackground(from: value, in: proxy)
+        }
+      }
+      .allowsHitTesting(false)
+    }
+  }
+
+  @ViewBuilder
+  private func selectionBackground(from preferences: MenuItemGeometryPreferenceKey.Value, in geometry: GeometryProxy) -> some View {
+    if let selection, let frame = preferences[selection].map({ geometry[$0] }) {
+      RoundedRectangle(cornerRadius: UIDimenion.cornerRadius)
+        .frame(width: frame.width, height: frame.height)
+        .offset(x: frame.minX, y: frame.minY)
     }
   }
 }
