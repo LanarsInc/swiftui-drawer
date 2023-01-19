@@ -1,6 +1,8 @@
 
 import SwiftUI
 
+/// Generic Drawer container that slides in `Menu` from the left edge on top of a given `Content`.
+/// It occupies all proposed space and it recommended to be placed in the root of our scene in terms of layout size.
 public struct Drawer<Menu: View, Content: View>: View {
 
   @Binding private var isOpened: Bool
@@ -10,6 +12,12 @@ public struct Drawer<Menu: View, Content: View>: View {
 
   // MARK: - Init
 
+  /// Instantiates new `Drawer` instance.
+  /// - Parameters:
+  ///   - isOpened: Binding to a bool that let's you control whether `Menu` is presented onscreen or not. Siblings can
+  ///   get access to it by adding `@Environment(\.isDrawerOpened) var isDrawerOpened` variable.
+  ///   - menu: `Menu` to be displayed on top of `Content` by sliding it from the left edge.
+  ///   - content: Content to be placed in the center of the screen. Occupies all given size.
   public init(
     isOpened: Binding<Bool>,
     @ViewBuilder menu:  () -> Menu,
