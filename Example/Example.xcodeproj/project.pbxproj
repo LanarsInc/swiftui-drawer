@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8256A2329776AA90070E510 /* MenuItemGeometryPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8256A2229776AA90070E510 /* MenuItemGeometryPreferenceKey.swift */; };
+		E8256A26297848F50070E510 /* MenuBackgroundTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8256A25297848F50070E510 /* MenuBackgroundTransition.swift */; };
 		E832B1F129533B74002E3462 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832B1F029533B74002E3462 /* ExampleApp.swift */; };
 		E832B1F329533B74002E3462 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832B1F229533B74002E3462 /* ContentView.swift */; };
 		E832B1F529533B76002E3462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E832B1F429533B76002E3462 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		E8256A2229776AA90070E510 /* MenuItemGeometryPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemGeometryPreferenceKey.swift; sourceTree = "<group>"; };
+		E8256A25297848F50070E510 /* MenuBackgroundTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundTransition.swift; sourceTree = "<group>"; };
 		E832B1ED29533B74002E3462 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E832B1F029533B74002E3462 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		E832B1F229533B74002E3462 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8256A24297848DF0070E510 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				E8256A25297848F50070E510 /* MenuBackgroundTransition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		E832B1E429533B74002E3462 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		E8FEEA8729704F77001FF8AF /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				E8256A24297848DF0070E510 /* Transition */,
 				E8FEEABD2970508B001FF8AF /* Preferences */,
 				E8FEEA8A29704F77001FF8AF /* Layout */,
 				E8FEEA8D29704F77001FF8AF /* Extensions */,
@@ -366,6 +377,7 @@
 				E8FEEA9629704F78001FF8AF /* View+OverrideColorScheme.swift in Sources */,
 				E8FEEA9A29704F78001FF8AF /* AnchorPreferenceKey.swift in Sources */,
 				E8FEEAAE29704F90001FF8AF /* UserHeader.swift in Sources */,
+				E8256A26297848F50070E510 /* MenuBackgroundTransition.swift in Sources */,
 				E8FEEAB329704F90001FF8AF /* Label+MenuItem.swift in Sources */,
 				E8E214D92970539A00DF7962 /* MenuItem.swift in Sources */,
 			);

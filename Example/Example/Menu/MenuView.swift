@@ -30,6 +30,10 @@ struct MenuView: View {
       Spacer()
         .frame(height: 10)
 
+      ColorSchemePicker(selection: Binding($colorScheme, default: systemColorScheme))
+        .anchorPreference(key: AnchorPreferenceKey<CGRect>.self, value: .bounds) { $0 }
+        .overrideColorScheme($colorScheme.animation(.default))
+
       Button(
         action: {
           /* noop */
@@ -44,8 +48,10 @@ struct MenuView: View {
     }
     .fixedSize(horizontal: true, vertical: false)
     .padding()
-    .background {
+    .backgroundPreferenceValue(AnchorPreferenceKey<CGRect>.self) { anchor in
       MenuBackground(colorScheme: colorScheme ?? systemColorScheme)
+        .transition(.menuBackgroundFadeIn(from: anchor))
+        .id(colorScheme ?? systemColorScheme)
     }
     .menuAppearance(appearance)
     .animation(.default, value: colorScheme)
