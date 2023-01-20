@@ -1,6 +1,10 @@
 # Drawer
+
+https://user-images.githubusercontent.com/829562/213693849-2cd9e1e7-8eaf-4110-bdcf-fb20917413ac.mp4
+
+
 <p align="left" >
-  <img src="https://github.com/LanarsInc/swiftui-drawer/blob/main/Assets/preview.gif" alt="Drawer" title="Drawer">
+  <video src="https://github.com/LanarsInc/swiftui-drawer/blob/main/Assets/preview.mp4" alt="Drawer" title="Drawer">
 </p>
 
 ## Overview and Motivation
